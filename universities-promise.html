@@ -78,13 +78,8 @@
     <div class="info"></div>
 
     <script>
-        fetch("https://cors-anywhere.herokuapp.com/http://universities.hipolabs.com/search?country=United+States")
-            .then(resObj => {
-                if (!resObj.ok) {
-                    throw new Error("Network response was not okay")
-                }
-                else resObj.json()
-            })
+        fetch('http://universities.hipolabs.com/search?country=United+States')
+            .then(resObj => resObj.json())
             .then(jsonObj => {
                 console.log(jsonObj)
                 activateInput(jsonObj);
