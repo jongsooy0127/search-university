@@ -78,7 +78,7 @@
     <div class="info"></div>
 
     <script>
-        fetch('http://universities.hipolabs.com/search?country=United+States')
+        fetch("./university.json")
             .then(resObj => resObj.json())
             .then(jsonObj => {
                 console.log(jsonObj)
